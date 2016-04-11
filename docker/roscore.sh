@@ -1,2 +1,3 @@
 #!/bin/bash
-docker run -d -it -p 11311:11311 frankjoshua/roscore
+docker network create ros
+docker run -d -it -p 11311:11311 --net ros --name master frankjoshua/roscore
