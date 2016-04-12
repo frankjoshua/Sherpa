@@ -1,0 +1,15 @@
+#!/bin/bash
+
+repos=(
+"frankjoshua/ros-master"
+"frankjoshua/ros-gazebo"
+"frankjoshua/ros-teleop"
+"frankjoshua/ros-turtlebot-sim"
+"frankjoshua/ros-serial"
+"frankjoshua/ros-kinect"
+);
+
+for repo in "${repos[@]}"
+do
+    docker push $repo
+done
