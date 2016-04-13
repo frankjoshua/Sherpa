@@ -2,6 +2,8 @@
 
 repos=(
 "frankjoshua/ros-master"
+"frankjoshua/ros-bash"
+"frankjoshua/ros-rviz"
 "frankjoshua/ros-gazebo"
 "frankjoshua/ros-teleop"
 "frankjoshua/ros-turtlebot-sim"
