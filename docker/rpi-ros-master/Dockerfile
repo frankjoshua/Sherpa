@@ -4,5 +4,5 @@ EXPOSE 11311
 # setup entrypoint
 ENV ROS_DISTRO indigo
 COPY ./ros_entrypoint.sh /
-#ENTRYPOINT ["/ros_entrypoint.sh"]
-#CMD ["roscore"]
+ENTRYPOINT ["/ros_entrypoint.sh"]
+CMD ["roscore"]
