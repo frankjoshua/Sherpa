@@ -5,10 +5,20 @@
       <geometry>
         <cylinder length="1.04775" radius="0.2032"/>
       </geometry>
-	<material name="clear">
-		<color rgba="0.75 0.75 0.75 0.4"/>
-	</material>
+      <material name="clear">
+        <color rgba="0.75 0.75 0.75 0.4"/>
+      </material>
     </visual>
+    <collision>
+      <geometry>
+        <cylinder length="1.04775" radius="0.2032"/>
+      </geometry>
+    </collision>
+    <inertia>
+      <mass value="12.0"/>
+      <inertia ixx="1e-3" iyy="1e-3" izz="1e-3"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertia>
   </link>
 
   <link name="base_lower_link">
@@ -20,6 +30,16 @@
 	<color rgba="0.5 0.5 0.5 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <box size="0.41148 0.30988 0.05588"/> 
+      </geometry>
+    </collision>
+   <inertia>
+      <mass value="16.0"/>
+      <inertia ixx="1e-3" iyy="1e-3" izz="1e-3"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertia>
   </link>
 
   <joint name="center_joint" type="continuous">
@@ -38,6 +58,16 @@
 	<color rgba="0.75 0.75 0.75 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.1524" radius="0.01"/>
+      </geometry>
+    </collision>
+    <inertia>
+      <mass value="0.1"/>
+      <inertia ixx="1e-3" iyy="1e-3" izz="1e-3"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertia>
   </link>
 
   <joint name="hitch_joint" type="fixed">
@@ -56,6 +86,16 @@
         <color rgba="0 0 0 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.1524" radius="0.01"/>
+      </geometry>
+    </collision>
+    <inertia>
+      <mass value="0.1"/>
+      <inertia ixx="1e-3" iyy="1e-3" izz="1e-3"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertia>
   </link>
 
   <joint name="axiz_front_left" type="continuous">
@@ -72,6 +112,16 @@
       </geometry>
       <material name="black"/>
     </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.1524" radius="0.01"/>
+      </geometry>
+    </collision>
+    <inertia>
+      <mass value="0.1"/>
+      <inertia ixx="1e-3" iyy="1e-3" izz="1e-3"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertia>
   </link>
 
   <joint name="axiz_front_right" type="continuous">
@@ -88,6 +138,16 @@
       </geometry>
       <material name="black"/>
     </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.1524" radius="0.01"/>
+      </geometry>
+    </collision>
+    <inertia>
+      <mass value="0.1"/>
+      <inertia ixx="1e-3" iyy="1e-3" izz="1e-3"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertia>
   </link>
 
   <joint name="axiz_rear_right" type="continuous">
@@ -104,6 +164,16 @@
       </geometry>
       <material name="black"/>
     </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.1524" radius="0.01"/>
+      </geometry>
+    </collision>
+    <inertia>
+      <mass value="0.1"/>
+      <inertia ixx="1e-3" iyy="1e-3" izz="1e-3"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertia>
   </link>
 
   <joint name="axiz_rear_left" type="continuous">
