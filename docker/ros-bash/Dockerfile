@@ -10,5 +10,6 @@ RUN sudo apt-get install -y ros-indigo-desktop-full
 RUN sudo apt-get install -y ros-indigo-gmapping
 RUN sudo apt-get install -y ros-indigo-amcl
 RUN sudo apt-get install -y ros-indigo-move-base
+RUN sudo apt-get install -y ros-indigo-frontier-exploration
 ENTRYPOINT ["/ros_entrypoint.sh"]
 CMD ["bash"]
