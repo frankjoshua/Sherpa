@@ -12,5 +12,6 @@ RUN sudo apt-get install -y ros-jade-amcl
 RUN sudo apt-get install -y ros-jade-move-base
 RUN sudo apt-get install -y gazebo5
 RUN sudo apt-get install -y ros-jade-depthimage-to-laserscan
+RUN sudo apt-get install -y ros-jade-hector-slam
 ENTRYPOINT ["/ros_entrypoint.sh"]
 CMD ["bash"]
