@@ -31,14 +31,14 @@ void messageCb( const geometry_msgs::Twist& toggle_msg){
     digitalWrite(13, LOW);
   }
 
-  mSpeed = mapfloat(toggle_msg.linear.x, -1, 1, -127, 127);
-  mDir = mapfloat(toggle_msg.angular.z, -1, 1, -127, 127);
+  mSpeed = mapfloat(toggle_msg.linear.x, -1.28, 1.28, -127, 127);
+  mDir = mapfloat(toggle_msg.angular.z, -6, 6, -127, 127);
 
   ST.motor(MOTOR_LEFT, constrain(mSpeed + mDir, -127, 127));
   ST.motor(MOTOR_RIGHT, constrain(mSpeed - mDir, -127, 127));
 }
 
-ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel", &messageCb );
+ros::Subscriber<geometry_msgs::Twist> sub("/cmd_vel", &messageCb );
 
 void setup()
 {
