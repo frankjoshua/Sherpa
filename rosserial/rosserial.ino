@@ -38,7 +38,7 @@ void messageCb( const geometry_msgs::Twist& toggle_msg){
   ST.motor(MOTOR_RIGHT, constrain(mSpeed - mDir, -127, 127));
 }
 
-ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel_mux/input/teleop", &messageCb );
+ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel", &messageCb );
 
 void setup()
 {
