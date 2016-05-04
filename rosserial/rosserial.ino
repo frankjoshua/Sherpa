@@ -9,8 +9,8 @@
 
 SoftwareSerial SWSerial(NOT_A_PIN, 12);
 SabertoothSimplified ST(SWSerial); // Use SWSerial as the serial port.
-#define MOTOR_LEFT 1
-#define MOTOR_RIGHT 2
+#define MOTOR_LEFT 2
+#define MOTOR_RIGHT 1
 
 /*
 * Helper function to map Floats, based on Arduino map()
@@ -38,7 +38,7 @@ void messageCb( const geometry_msgs::Twist& toggle_msg){
   ST.motor(MOTOR_RIGHT, constrain(mSpeed - mDir, -127, 127));
 }
 
-ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel_mux/input/teleop", &messageCb );
+ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel", &messageCb );
 
 void setup()
 {
