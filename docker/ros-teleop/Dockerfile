@@ -1,5 +1,5 @@
-FROM ros:indigo-ros-base
+FROM ros:jade-ros-base
 RUN sudo apt-get -y update
-RUN sudo apt-get install -y ros-indigo-turtlebot-apps
+COPY ./teleop.py /teleop.py
 ENTRYPOINT ["/ros_entrypoint.sh"]
-CMD ["roslaunch", "turtlebot_teleop", "keyboard_teleop.launch"]
+CMD ["/teleop.py"]
