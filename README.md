@@ -1,5 +1,13 @@
 # rostest
 
+The networking between containers is handled by Weave<br>
+sudo -s<br>
+curl -L git.io/weave -o /usr/local/bin/weave<br>
+chmod a+x /usr/local/bin/weave<br>
+weave launch
+eval "$(weave env)"
+
+
 /docker - contains Docker build files
 
 //Follow the post to get docker running on raspberry pi<br>
