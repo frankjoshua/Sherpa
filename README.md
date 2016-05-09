@@ -4,8 +4,8 @@ The networking between containers is handled by Weave<br>
 sudo -s<br>
 curl -L git.io/weave -o /usr/local/bin/weave<br>
 chmod a+x /usr/local/bin/weave<br>
-weave launch
-eval "$(weave env)"
+weave launch<br>
+eval "$(weave env)"<br>
 
 
 /docker - contains Docker build files
