@@ -12,7 +12,8 @@ RUN sudo apt-get install -y ros-jade-amcl
 RUN sudo apt-get install -y ros-jade-move-base
 RUN sudo apt-get install -y gazebo5
 RUN sudo apt-get install -y ros-jade-depthimage-to-laserscan
-RUN sudo apt-get install -y ros-jade-hector-slam
+RUN sudo apt-get install -y ros-jade-hector-slam \
+ros-jade-rtabmap-ros
 # nvidia-docker hooks
 LABEL com.nvidia.volumes.needed="nvidia_driver"
 ENV PATH /usr/local/nvidia/bin:${PATH}
