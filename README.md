@@ -2,6 +2,9 @@
 Robomo's club project. A guide bot.
 Requires Ubuntu 14.04. Has been partially tested on 16.04.
 
+Issue tracker https://robomo.atlassian.net
+
+#**** Anything Past Here is just Notes ****
 # Ros Tests
 
 The networking between containers is handled by Weave<br>
