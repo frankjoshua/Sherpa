@@ -165,7 +165,7 @@
     </sensor>
 </gazebo>
 
-<!-- <gazebo reference="camera_link">
+<gazebo reference="camera_link">
     <material>Gazebo/Blue</material>
     <sensor type="gpu_ray" name="hokuyo">
       <pose>0 0 0 0 0 0</pose>
@@ -191,7 +191,7 @@
         <frameName>camera_link</frameName>
       </plugin>
     </sensor>
-  </gazebo> -->
+  </gazebo>
 
   <joint name="camera_joint" type="fixed">
     <axis xyz="0 0 1"/>
