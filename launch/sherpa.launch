@@ -26,6 +26,7 @@
 
 
   <!-- Start Mapping Server -->
-  <include file="$(arg base_path)/launch/rtabmap_laser.launch"/>
+  <node name="gmapping" pkg="gmapping" type="slam_gmapping"/>
+  <!--<include file="$(arg base_path)/launch/rtabmap.launch"/>-->
 
 </launch>
