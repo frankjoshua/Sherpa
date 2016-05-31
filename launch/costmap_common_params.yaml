@@ -6,3 +6,5 @@ laser_scan_sensor:
   sensor_frame: laser_link
   data_type: LaserScan
   topic: scan
+  marking: true
+  clearing: true

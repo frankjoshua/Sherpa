@@ -4,13 +4,15 @@
   
   <!-- Load URDF file -->
   <param name="robot_description" textfile="$(arg base_path)/urdf/sherpa.urdf.xacro" />
-  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
   <!-- Start Gazebo -->
   <include file="$(find gazebo_ros)/launch/willowgarage_world.launch"/>
   <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
         args="-param robot_description -urdf -model efim -x 0 -y 0"/>
+
+  <!-- Publish robot state -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
   <!-- ACML handles localiztion -->
   <include file="$(find amcl)/examples/amcl_diff.launch"/>
