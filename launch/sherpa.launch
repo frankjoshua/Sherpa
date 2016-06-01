@@ -1,7 +1,7 @@
 <launch>
   
   <arg name="base_path" value=".." />
-  
+
   <!-- Load URDF file -->
   <param name="robot_description" textfile="$(arg base_path)/urdf/sherpa.urdf.xacro" />
 
