@@ -95,11 +95,11 @@
 	<color rgba="0.1 0.1 1 1"/>
       </material>
     </visual>
-<!--    <collision>
+    <collision>
       <geometry>
         <box size="0.0762 0.2794 0.0762"/> 
       </geometry>
-    </collision> -->
+    </collision>
    <inertial>
       <mass value="0.25"/>
       <inertia ixx="1.0" iyy="1.0" izz="1.0"
@@ -365,7 +365,7 @@
 
 <gazebo reference="laser_link">
     <material>Gazebo/Blue</material>
-    <sensor type="ray" name="hokuyo">
+    <sensor type="ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>true</visualize>
       <update_rate>40</update_rate>
@@ -374,8 +374,8 @@
           <horizontal>
             <samples>720</samples>
             <resolution>1</resolution>
-            <min_angle>-1.570796</min_angle>
-            <max_angle>1.570796</max_angle>
+            <min_angle>-2.26889</min_angle>
+            <max_angle>2.26889</max_angle>
           </horizontal>
         </scan>
         <range>
@@ -384,7 +384,7 @@
           <resolution>0.01</resolution>
         </range>
       </ray>
-      <plugin name="gpu_laser" filename="libgazebo_ros_laser.so">
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
         <topicName>/scan</topicName>
         <frameName>laser_link</frameName>
       </plugin>
