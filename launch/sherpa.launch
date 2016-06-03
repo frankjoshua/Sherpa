@@ -1,0 +1,34 @@
+<launch>
+  
+  <arg name="base_path" value=".." />
+
+  <!-- Load URDF file -->
+  <param name="robot_description" textfile="$(arg base_path)/urdf/sherpa.urdf.xacro" />
+
+  <!-- Start Gazebo -->
+  <include file="$(find gazebo_ros)/launch/willowgarage_world.launch"/>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+        args="-param robot_description -urdf -model efim -x 0 -y 0"/>
+
+  <!-- Publish robot state -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+  <!-- ACML handles localiztion -->
+  <include file="$(find amcl)/examples/amcl_diff.launch"/>
+
+  <!-- Move base handles navigation -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(arg base_path)/launch/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+    <rosparam file="$(arg base_path)/launch/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+    <rosparam file="$(arg base_path)/launch/global_costmap_params.yaml" command="load"/>
+    <rosparam file="$(arg base_path)/launch/local_costmap_params.yaml" command="load"/>
+    <rosparam file="$(arg base_path)/launch/base_local_planner_params.yaml" command="load"/>
+  </node>
+
+
+  <!-- Start Mapping Server -->
+  <node name="gmapping" pkg="gmapping" type="slam_gmapping"/>
+  <!--<include file="$(arg base_path)/launch/rtabmap.launch"/>-->
+
+</launch>
