@@ -111,7 +111,7 @@
     <axis xyz="0 0 1"/>
     <parent link="body_link"/>
     <child link="laser_link"/>
-    <origin rpy="0 0 0" xyz="0.2 0 0.7"/>
+    <origin rpy="0 0 0" xyz="0.2 0 0.55"/>
   </joint> 
 
   <link name="hitch_front_link">
