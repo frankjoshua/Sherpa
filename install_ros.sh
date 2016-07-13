@@ -12,7 +12,6 @@ sudo apt-get install -y ros-indigo-desktop-full
 sudo apt-get install -y ros-indigo-gmapping
 sudo apt-get install -y ros-indigo-amcl
 sudo apt-get install -y ros-indigo-move-base
-sudo apt-get install -y gazebo5
 sudo apt-get install -y ros-indigo-depthimage-to-laserscan
 sudo apt-get install -y ros-indigo-hector-slam ros-indigo-rtabmap-ros
 sudo apt-get install -y python-rosinstall
