@@ -14,7 +14,7 @@
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
-  <!-- ACML handles localiztion -->
+  <!-- ACML handles localiztion in static maps -->
   <!--<include file="$(find amcl)/examples/amcl_diff.launch"/>-->
 
   <!-- Move base handles navigation -->
@@ -30,5 +30,8 @@
   <!-- Start Mapping Server -->
   <node name="gmapping" pkg="gmapping" type="slam_gmapping"/>
   <!--<include file="$(arg base_path)/launch/rtabmap.launch"/>-->
+
+  <!-- Start RVIZ for visualization -->
+  <node name="rviz" pkg="rviz" type="rviz"/>
 
 </launch>
