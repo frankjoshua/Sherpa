@@ -19,6 +19,8 @@ RUN sudo apt-get install -y ros-indigo-baxter-sdk ros-indigo-baxter-simulator
 
 COPY ./baxter.sh /root/ros_ws
 COPY ./entrypoint.sh /
+COPY ./wobble.sh /
+COPY ./teleop.sh /
 
 ENV your_ip 127.0.0.1
 ENV baxter_hostname baxterserial.local

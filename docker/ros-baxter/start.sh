@@ -1,4 +1,5 @@
 #!/bin/bash
+xhost +
 docker run -it \
   --privileged \
   --env="DISPLAY" \

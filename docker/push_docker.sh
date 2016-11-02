@@ -9,6 +9,7 @@ repos=(
 "frankjoshua/ros-turtlebot-sim"
 "frankjoshua/ros-serial"
 "frankjoshua/ros-kinect"
+"frankjoshua/ros-baxter"
 );
 
 for repo in "${repos[@]}"
